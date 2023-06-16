@@ -17,7 +17,7 @@ const Modal = ({ store, setStore }) => {
           <button
             onClick={() => {
               const newStore = _.cloneDeep(store);
-              _.set(newStore, `modalProperty`, true);
+              _.set(newStore, `modalProperty.showModal`, false);
               setStore(newStore);
             }}
           >
