@@ -3,33 +3,33 @@ import _ from "lodash";
 const modals = [
   {
     id: 1,
-    title: "Welcome 1 1",
-    title1: "Welcome 1 2",
-    text: "Text 1",
+    title: "Welcome Title 1 1",
+    title1: "Welcome subTitle 1 2",
+    text: "Welcome Text 1",
   },
   {
     id: 2,
-    title: "Welcome 2 1",
-    title1: "Welcome 2 2",
-    text: "Text 2",
+    title: "Welcome Title 2 1",
+    title1: "Welcome subTitle 2 2",
+    text: "Welcome Text 2",
   },
   {
     id: 3,
-    title: "Welcome 3 1",
-    title1: "Welcome 3 2",
-    text: "Text 3",
+    title: "Welcome Title 3 1",
+    title1: "Welcome subTitle 3 2",
+    text: "Welcome Text 3",
   },
   {
     id: 4,
-    title: "Welcome 4 1",
-    title1: "Welcome 4 2",
-    text: "Text 4",
+    title: "Welcome Title 4 1",
+    title1: "Welcome subTitle 4 2",
+    text: "Welcome Text 4",
   },
   {
     id: 5,
-    title: "Welcome 5 1",
-    title1: "Welcome 5 2",
-    text: "Text 5",
+    title: "Welcome Title 5 1",
+    title1: "Welcome subTitle 5 2",
+    text: "Welcome Text 5",
   },
 ];
 
@@ -44,8 +44,8 @@ const App = ({ store, setStore }) => {
             onClick={() => {
               const newStore = _.cloneDeep(store);
               _.set(newStore, `modalProperty.showModal`, true);
-              _.set(newStore, `modalProperty.title`, true);
-              _.set(newStore, `modalProperty.title1`, true);
+              _.set(newStore, `modalProperty.title`, modal.title);
+              _.set(newStore, `modalProperty.title1`, modal.title1);
               _.set(newStore, `modalText`, modal.text);
               setStore(newStore);
             }}

@@ -5,7 +5,7 @@ const Modal = ({ store, setStore }) => {
     <div
       className="modal"
       style={{
-        display: store.showModal ? "block" : "none",
+        display: store.modalProperty.showModal ? "block" : "none"
       }}
     >
       <div className="background"></div>
@@ -39,7 +39,7 @@ const Modal = ({ store, setStore }) => {
         </div>
       </div>
     </div>
-  );
+  )
 };
 
 export default Modal;

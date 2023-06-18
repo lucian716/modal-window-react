@@ -17,8 +17,14 @@ function Container() {
 
   return (
     <>
-      <App store={store} setStore={setStore} />
-      <Modal store={store} setStore={setStore} />
+      <App
+        store={store}
+        setStore={setStore}
+      />
+      <Modal
+        store={store}
+        setStore={setStore}
+      />
     </>
   );
 }
